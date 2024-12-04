@@ -1,9 +1,9 @@
 resource "aws_instance" "jenkins-server" {
-  ami           = "ami-0ed83e7a78a23014e"
+  ami           = "ami-0453ec754f44f9a4a"
   instance_type = "t2.micro"
   key_name      = "jenkins-deploy"
   tags = {
-    Name = "Myweek20project"
+    Name = "jenkins-server"
   }
   user_data = file("./scripts/jenkins-install.sh")
 }
